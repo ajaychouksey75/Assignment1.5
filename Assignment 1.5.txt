@@ -20,4 +20,20 @@ Input data is divided in Input Splits, considering the inplut split number of ma
 Mapper dos the processing of data and gives the output in key valu pair.
 This Output is further sorted /consolidated before sending it to reducer.
 In reducer the final functinality to filter the data is done and the output is genreated.
-Thsi output is in key value pair.
+This output is in key value pair.
+
+Other Components of Hadoop are
+
+Pig
+A data flow language and execution environment for exploring very large datasets.
+Pig runs on HDFS and MapReduce clusters.
+
+Hive
+A distributed data warehouse. Hive manages data stored in HDFS and provides a
+query language based on SQL (and which is translated by the runtime engine to
+MapReduce jobs) for querying the data.
+
+HBase
+A distributed, column-oriented database. HBase uses HDFS for its underlying
+storage, and supports both batch-style computations using MapReduce and point
+queries (random reads).
