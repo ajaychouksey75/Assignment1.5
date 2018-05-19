@@ -1,0 +1,23 @@
+Hadoop 2.x Components
+
+1. HDFS 
+Hadoop Distributed File System :
+Its a File System which allows to store the data on local file system in distributed fashion.
+HDFS takes care of providing the Virtual environment wherein, it decides to store the data on
+cheaper hardware . File is divided in Blockes, each of the block size is 64 MB.
+HDFS containes the
+1. Name Node (master Node containaing meta iformation as which block is on which data node
+2. Data Node- contains the actual data, it stores the file in blocks.
+
+So if the file size is 128MB it will fit 1 block
+if its 70 MB again it will fit 2 blocks 1 64 MB and another one of 6 MB, in this case the data which is stored as 6MB in one of the data node will have wastage.
+
+Name nod stores the data with replication factor of 3, which means that at a time it store the data in 3 data nodes, so if at any time 1 of the data node malfunction, data can be fetched from other data node and also it can be repicated in new node.
+
+2. MAP Reduce
+Its the Framework which allows the data to be processed parallely.
+Input data is divided in Input Splits, considering the inplut split number of mappers are assigned in each of the machines.
+Mapper dos the processing of data and gives the output in key valu pair.
+This Output is further sorted /consolidated before sending it to reducer.
+In reducer the final functinality to filter the data is done and the output is genreated.
+Thsi output is in key value pair.
